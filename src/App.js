@@ -10,6 +10,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             hallo dennis test versie 11.
+            I was changed in the feature branch dz
           </p>
           <a
             className="App-link"
