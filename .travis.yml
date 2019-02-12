@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run testerdetest/dockercursus-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "dockercursus-react-bs"
+  env: "DockercursusReactBs-env"
+  bucket_name: "elasticbeanstalk-us-east-2-275306206525"
+  bucket_path: "dockercursus-react-bs"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
